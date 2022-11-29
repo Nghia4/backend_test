@@ -1,0 +1,24 @@
+@startuml Agency
+
+actor Agency
+
+
+Agency -> API_Gateway: Send request 
+
+API_Gateway -> API_Gateway : Validate Authenticate
+
+    alt Authentication failed
+
+    API_Gateway -> Agency : Response forbiden 
+
+    else Authentication successful
+
+    API_Gateway -> API_Gateway : Read,create,update,delete data that can be accessed
+
+    API_Gateway -> Agency : Response data
+    end
+
+
+
+
+@enduml

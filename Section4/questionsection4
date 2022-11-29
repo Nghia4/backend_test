@@ -1,0 +1,15 @@
+    SECTION IV: Good job, right now our application needs to synchronize products, pricing of the Agency by using third-party API.
+      1. Write sequence diagram to build a solution to save, merge products data from third-party API to our database. (Third-party API data change every hour)
+      2. What's the strong and weak point of your solution? How to improve that?
+
+
+answer question 2:
+
+Background job là một nơi xứ lý ngầm (không can thiệp vào các luồng chính của một trang web)
+
+Điểm mạnh : là khi sử dụng background job thì chúng ta có thể xử lý những tác vụ mà không tương với người dùng thông qua API  như là gửi mail tự đông, lấy data từ một bên nào đó (third party), tăng trải nghiệm người dùng trên các trang web. Nếu không sử dụng thì việc xử lý data sẽ do web đảm nhiểm dẫn đến khả năng trang web bị đình trệ hoặc bị ngắt khi server xử lý quá nhiều thông tin cùng lúc.
+
+Điểm yếu : Là không nên dùng vào những việc mang tính chất rất quan trọng của một trang web
+
+Cách để cải thiện là nên dùng vào những việc tránh làm quá tải khối lượng data như là hệ thống tracking , 
+hay là hệ thống thông báo (notification)

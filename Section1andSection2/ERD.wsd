@@ -1,0 +1,75 @@
+@startuml e-commercial platform
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity Customer {
++ id : string <<generated>>
+--
++ personalId : Personal_informationId;
++ cart : cartId;
++ transaction : transactionId;
++ billing : billingId;
+}
+
+entity Personal_information {
++ id : string <<generated>>
+--
++ name : string
++ address : string
++ email : string
++ phone number : string
++ gender : string
+}
+
+entity Agency { 
++ id : string <<generated>>
+--
++ personalId : Personal_informationId;
++ product : productId
++ transaction : transactionId;
++ billing : billingId;
+}
+
+entity cart {
+    + id : string <<generated>>
+    --
+    + name :string
+}
+entity product {
+    + id : string <<generated>>
+    --
+    + name :string
+}
+entity transaction {
+    + id : string <<generated>>
+    --
+    + name :string
+}
+entity billing {
+    + id : string <<generated>>
+    --
+    + name :string
+}
+
+entity Admin {
++ id : string <<generated>>
++ name : string
+--
++ readAgency():void
++ createAgency():void
++ updateAgency():void
++ deleteAgency():void
+}
+
+Agency}|--||Admin
+Personal_information}|--||Agency
+Personal_information}|--||Customer
+product}|--||Agency
+cart}|--||Customer
+transaction}|--||Agency
+transaction}|--||Customer
+billing}|--||Agency
+billing}|--||Customer
+
+@enduml

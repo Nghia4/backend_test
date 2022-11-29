@@ -1,0 +1,3 @@
+1. Write an architecture diagram to build a solution adapt the list of features below.
+    + Ensure isolating development and production data. (Don't merge data together)
+    + Apply Gitlab CI or Github Action to test, build and deploy to Heroku automatically

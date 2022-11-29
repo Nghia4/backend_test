@@ -1,0 +1,29 @@
+@startuml scale API
+
+actor Customer
+
+Customer -> Browser : Submit username and password
+
+Browser -> API_Gateway : Send Login request
+
+API_Gateway -> Authorize_service : Authenticate
+
+    alt Authenticate successfully
+
+    Authorize_service -> API_Gateway : Responde sucessfully
+
+    API_Gateway -> Browser : Responde successfully
+
+    Browser -> Browser : Store cookies
+
+    Browser -> Customer : Show authenticate state
+
+    else Authenticate failed
+
+    Authorize_service -> API_Gateway : Responde failed
+
+    API_Gateway -> Browser : Responde failed
+
+    Browser -> Customer : Show unauthenticate state
+    end
+@enduml

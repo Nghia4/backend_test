@@ -1,0 +1,22 @@
+@startuml Customer
+
+actor Customer
+
+
+Customer -> ClientApp: Open Login Screen
+
+Customer -> ClientApp: Input username & password & submit login
+
+ClientApp -> Server: Authentication request
+
+Server -> ClientApp: Authentication Success
+
+    alt Authentication failed
+
+    Server -> ClientApp: Authentication Failed
+
+    ClientApp -> ClientApp: Show notification failed login
+
+    end
+
+@enduml

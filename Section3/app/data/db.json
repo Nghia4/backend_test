@@ -1,0 +1,37 @@
+{
+  "ids": {
+    "Admin": 3,
+    "User": 4,
+    "UserCredentials": 4,
+    "Agency": 4,
+    "Customer": 3,
+    "Billing": 2
+  },
+  "models": {
+    "Admin": {
+      "1": "{\"username\":\"toi\",\"id\":1}",
+      "2": "{\"username\":\"admin\",\"id\":2}"
+    },
+    "User": {
+      "dd1637fd-49db-4ec9-a64c-477e87604614": "{\"id\":\"dd1637fd-49db-4ec9-a64c-477e87604614\",\"email\":\"testuser2@abc.com\"}",
+      "56c61a7d-87bd-41fe-a650-0c3617eea915": "{\"id\":\"56c61a7d-87bd-41fe-a650-0c3617eea915\",\"email\":\"testuse2@abc.com\"}",
+      "c5515d20-9175-44d7-b81b-c468b36edaa7": "{\"id\":\"c5515d20-9175-44d7-b81b-c468b36edaa7\",\"email\":\"testuser3@abc.com\"}"
+    },
+    "UserCredentials": {
+      "11122aa3-ba8c-458b-a029-5455e6a65744": "{\"id\":\"11122aa3-ba8c-458b-a029-5455e6a65744\",\"password\":\"$2a$10$gxvbKwt9IpHXVr0OeCT63eN4wQ2BwHmths/29ZuIxIwhZy4DhsAki\",\"userId\":\"dd1637fd-49db-4ec9-a64c-477e87604614\"}",
+      "8cf48034-f4e0-494a-a9b1-db063bc87c7c": "{\"id\":\"8cf48034-f4e0-494a-a9b1-db063bc87c7c\",\"password\":\"$2a$10$MPA7ZvigrJDQso15yDxJEeM1gPOaSKXy6fLM0FbXp3bZG0eebEmrm\",\"userId\":\"56c61a7d-87bd-41fe-a650-0c3617eea915\"}",
+      "bde7be70-d633-4a7c-93f9-9a897d38780d": "{\"id\":\"bde7be70-d633-4a7c-93f9-9a897d38780d\",\"password\":\"$2a$10$6DCarvlwgRkEbrVwhGn1veyKSnU6dN0X4.SfUlUzBUi4q1Tob9bba\",\"userId\":\"c5515d20-9175-44d7-b81b-c468b36edaa7\"}"
+    },
+    "Agency": {
+      "1": "{\"username\":\"Agency1\",\"id\":1}",
+      "2": "{\"username\":\"agency3\",\"adminId\":2,\"id\":2}",
+      "3": "{\"username\":\"agency2\",\"adminId\":1,\"id\":3}"
+    },
+    "Customer": {
+      "2": "{\"username\":\"customer1\",\"password\":\"123456\",\"agencyId\":1,\"adminId\":1,\"id\":2}"
+    },
+    "Billing": {
+      "1": "{\"name\":\"1\",\"adminId\":1,\"id\":1}"
+    }
+  }
+}

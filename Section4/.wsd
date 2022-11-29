@@ -1,0 +1,15 @@
+@startuml Solution
+
+Browser -> Webprocess : Send HTTP request
+
+Webprocess -> Background_Job : Schedule work
+
+Webprocess -> Browser : HTTP responde
+
+Background_Job -> Third_Party_API : request to fetch data every hours
+
+Third_Party_API -> Background_Job : receive data
+
+Background_Job -> Background_Job : Save and merge data in database
+
+@enduml

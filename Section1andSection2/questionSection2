@@ -1,0 +1,22 @@
+ 1. With UML you have already designed on question 1, what database are you using to implement?
+
+ Em sẽ sử dụng database là mongodb thông qua mongoose
+
+ 2. Why are you using that? What is the strong and weak point of it?
+
+ Em sử dụng mongoDb là vì nó có khả năng phản hồi và truy vấn data nhanh
+
+ Điểm mạnh của mongoDB
+
+    +Lưu trữ dữ liệu dưới dạng Document JSON
+    +Hiệu suất cao
+    +Tính sẵn sàng cao, có thể nhân rộng
+    +Khả năng mở rộng cao  Sharding
+    +Năng động,không có lược đồ cứng nhắc.
+    +Linh hoạt,thêm / xóa trường có ít hoặc không ảnh hưởng đến ứng dụng
+
+Tuy nhiên sẽ có vài nhược điểm khi sử dụng mongoDB
+    +Không có chức năng hoặc thủ tục lưu trữ tồn tại nơi bạn có thể liên kết logic
+    +Bị nhiều người dùng đánh giá là tốn bộ nhớ do lưu dữ liệu dưới dạng key_value, collection
+    +Có nguy cơ gây mất dữ liệu khi chưa hoàn thành bản lưu
+    +Khi xóa database trên mongoDB không thể xóa cùng lúc nhiều cái mà phải xóa từng cái
