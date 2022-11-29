@@ -2,8 +2,10 @@
 
 Điểm mạnh của việc này là có hình thức đơn giản , dễ tiếp nhận, nhanh gọn
 
-Điểm yếu là không phù hợp với những dự án có độ phức tạp cao, số lượng request APi càng lớn thì sẽ giảm đi hiệu quả 
+Điểm yếu là không phù hợp với những dự án có độ phức tạp cao, 
+số lượng request APi càng lớn thì sẽ giảm đi hiệu quả 
 
 Giải pháp :
 
-Là nên tạo một service đê giải quyết quá trình authenticate từ api_gateway để giảm tải và tăng mức đô performent
+Là nên tạo một service đê giải quyết quá trình authenticate từ api_gateway 
+để giảm tải và tăng mức đô performent
