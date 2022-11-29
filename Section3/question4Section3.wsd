@@ -10,7 +10,7 @@ API_Gateway -> Authorize_service : Authenticate
 
     alt Authenticate successfully
 
-    Authorize_service -> API_Gateway : Response sucessfully
+    Authorize_service -> API_Gateway : Response successfully
 
     API_Gateway -> Browser : Responde successfully
 
