@@ -4,6 +4,8 @@ Browser -> Webprocess : Send HTTP request
 
 Webprocess -> Background_Job : Schedule work
 
+Background_Job --> Webprocess:
+
 Webprocess -> Browser : HTTP responde
 
 Background_Job -> Third_Party_API : request to fetch data every hours

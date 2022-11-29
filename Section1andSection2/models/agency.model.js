@@ -17,5 +17,9 @@ const Schema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Billing"
     }],
+    adminId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Admin"
+    }
 })
 export const Agency = mongoose.model('Agency', Schema)
