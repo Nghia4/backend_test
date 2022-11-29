@@ -7,7 +7,10 @@ answer question 2:
 
 Background job là một nơi xứ lý ngầm (không can thiệp vào các luồng chính của một trang web)
 
-Điểm mạnh : là khi sử dụng background job thì chúng ta có thể xử lý những tác vụ mà không tương với người dùng thông qua API  như là gửi mail tự đông, lấy data từ một bên nào đó (third party), tăng trải nghiệm người dùng trên các trang web. Nếu không sử dụng thì việc xử lý data sẽ do web đảm nhiểm dẫn đến khả năng trang web bị đình trệ hoặc bị ngắt khi server xử lý quá nhiều thông tin cùng lúc.
+Điểm mạnh : là khi sử dụng background job thì chúng ta có thể xử lý những tác vụ mà không tương 
+với người dùng thông qua API  như là gửi mail tự đông, lấy data từ một bên nào đó (third party),
+tăng trải nghiệm người dùng trên các trang web. Nếu không sử dụng thì việc xử lý data sẽ do web đảm nhiểm 
+dẫn đến khả năng trang web bị đình trệ hoặc bị ngắt khi server xử lý quá nhiều thông tin cùng lúc.
 
 Điểm yếu : Là không nên dùng vào những việc mang tính chất rất quan trọng của một trang web
 
