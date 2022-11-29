@@ -162,17 +162,26 @@ if (renterA.container + renterB.container === neededContainer && renterC.contain
     console.log(contractBandC)
 }
 
+//
+if (renterA.container + renterB.container === neededContainer && renterA.container + renterC.container < neededContainer && renterB.container + renterC.container < neededContainer) {
+    console.log(contractAandB)
+} else if (renterA.container + renterC.container === neededContainer && renterA.container + renterB.container < neededContainer && renterC.container + renterB.container < neededContainer) {
+    console.log(contractAandC)
+} else if (renterB.container + renterC.container === neededContainer && renterB.container + renterA.container != neededContainer < renterC.container + renterA.container < neededContainer) {
+    console.log(contractBandC)
+}
+
 // check if two of three renter have the same value when sum and and === neededContainer (exp: A+B = B+C = neededContainer)
 if (renterA.container === renterB.container && renterA.totalCost === renterB.totalCost && renterC.container < neededContainer) {
-    if (renterA.container + renterC.container === renterB.container + renterC.container && renterA.container + renterC.container === neededContainer) {
+    if (renterA.container + renterC.container === renterB.container + renterC.container && renterA.container + renterC.container === neededContainer && renterA.totalCost + renterC.totalCost < renterA.totalCost + renterB.totalCost) {
         console.log(contractAandC, ' or ', contractBandC)
     }
 } else if (renterA.container === renterC.container && renterA.totalCost === renterC.totalCost && renterB.container < neededContainer) {
-    if (renterA.container + renterB.container === renterC.container + renterB.container && renterA.container + renterB.container === neededContainer) {
+    if (renterA.container + renterB.container === renterC.container + renterB.container && renterA.container + renterB.container === neededContainer && renterA.totalCost + renterB.totalCost < renterA.totalCost + renterC.totalCost) {
         console.log(contractAandB, ' or ', contractBandC)
     }
 } else if (renterB.container === renterC.container && renterB.totalCost === renterC.totalCost && renterA.container < neededContainer) {
-    if (renterB.container + renterA.container === renterC.container + renterA.container && renterB.container + renterA.container === neededContainer) {
+    if (renterB.container + renterA.container === renterC.container + renterA.container && renterB.container + renterA.container === neededContainer && renterA.totalCost + renterB.totalCost < renterB.totalCost + renterC.totalCost) {
         console.log(contractAandB, ' or ', contractAandC)
     }
 }
@@ -181,12 +190,12 @@ if (renterA.container === renterB.container && renterA.totalCost === renterB.tot
 if (renterA.container + renterB.container === neededContainer && renterA.container + renterC.container === neededContainer) {
     if (renterA.totalCost + renterB.totalCost < renterA.totalCost + renterC.totalCost) {
         console.log(contractAandB)
-    } if (renterA.totalCost + renterC.totalCost < renterA.totalCost + renterB.totalCost) {
+    } else if (renterA.totalCost + renterC.totalCost < renterA.totalCost + renterB.totalCost) {
         console.log(contractAandC)
     }
 }
 
-if (renterB.container + renterA.container === neededContainer && renterB.container + renterC.container === neededContainer) {
+else if (renterB.container + renterA.container === neededContainer && renterB.container + renterC.container === neededContainer) {
     if (renterB.totalCost + renterA.totalCost < renterB.totalCost + renterC.totalCost) {
         console.log(contractAandB)
     } else if (renterB.totalCost + renterC.totalCost < renterB.totalCost + renterA.totalCost) {
@@ -194,7 +203,7 @@ if (renterB.container + renterA.container === neededContainer && renterB.contain
     }
 }
 
-if (renterC.container + renterA.container === neededContainer && renterC.container + renterB.container === neededContainer) {
+else if (renterC.container + renterA.container === neededContainer && renterC.container + renterB.container === neededContainer) {
     if (renterC.totalCost + renterA.totalCost < renterC.totalCost + renterB.totalCost) {
         console.log(contractAandC)
     } else if (renterC.totalCost + renterB.totalCost < renterC.totalCost + renterA.totalCost) {
